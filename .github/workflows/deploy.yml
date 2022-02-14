@@ -1,9 +1,6 @@
 name: Deploy To Hostinger
 
-on:
-  push:
-    branches:
-      - master
+on: push
 
 jobs:
   log-event-info:
