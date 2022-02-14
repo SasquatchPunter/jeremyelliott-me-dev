@@ -5,7 +5,9 @@ on:
       - master
 
 jobs:
-  log-event-type:
+  log-event-info:
     runs-on: ubuntu-latest
     steps:
-      run: echo 'This workflow was triggered by a ${{ github.event_type }}!'
+      run: |
+        echo 'This workflow was triggered by a ${{ github.event_name }}!'
+        echo 'REPO: ${{ github.repo }}'
