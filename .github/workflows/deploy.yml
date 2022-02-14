@@ -6,7 +6,6 @@ jobs:
   log-event-info:
     runs-on: ubuntu-latest
     steps:
-      - name: build
-        run: |
+      - run: |
           echo "This workflow was triggered by a ${{ github.event_name }}!"
           echo "REPO: ${{ github.repo }}"
