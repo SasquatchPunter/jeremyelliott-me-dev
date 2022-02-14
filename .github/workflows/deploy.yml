@@ -1,4 +1,5 @@
 name: Deploy To Hostinger
+
 on:
   push:
     branches:
@@ -8,6 +9,6 @@ jobs:
   log-event-info:
     runs-on: ubuntu-latest
     steps:
-      run: |
+      - run: |
         echo 'This workflow was triggered by a ${{ github.event_name }}!'
         echo 'REPO: ${{ github.repo }}'
