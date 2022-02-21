@@ -1,11 +1,18 @@
 name: Deploy To Hostinger
-
 on: push
 
 jobs:
-  log-event-info:
+  web-deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "This workflow was triggered by a ${{ github.event_name }}!"
-          echo "REPO: ${{ github.repository }}"
+      - name: Get latest code
+        uses: actions/checkout@v2
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.ftp_serve }}
+          username: ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          local-dir: dist/
