@@ -9,10 +9,13 @@ jobs:
       - name: Get latest code
         uses: actions/checkout@v2
 
+      - name: Log files
+        run: ls
+
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.ftp_server }}
+          server: ftp://jeremyelliott.me
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
           local-dir: dist/
