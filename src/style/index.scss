@@ -1,5 +1,6 @@
 $c-blue: blue;
 $c-red: tomato;
+$c-green: lime;
 $em_0-5: 0.5em;
 $em_-0-5: -0.5em;
 $em_-0-25: -0.25em;
@@ -7,7 +8,7 @@ $em_0-25: 0.25em;
 
 h1 {
   position: relative;
-  color: $c-red;
+  color: $c-green;
   animation: shake 500ms linear infinite;
 }
 
