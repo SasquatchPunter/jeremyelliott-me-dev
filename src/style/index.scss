@@ -1,6 +1,24 @@
 $c-blue: blue;
 $c-red: tomato;
+$em_0-5: 0.5em;
+$em_-0-5: -0.5em;
+$em_-0-25: -0.25em;
+$em_0-25: 0.25em;
 
 h1 {
+  position: relative;
   color: $c-red;
+  animation: shake 500ms linear infinite;
+}
+
+@keyframes shake {
+  0% {
+    left: $em_-0-25;
+  }
+  50% {
+    left: $em_0-25;
+  }
+  100% {
+    left: $em_-0-25;
+  }
 }
